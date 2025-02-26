@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pk photos</title>
+        <link rel="icon" type="logo.jpg-icon" href="icon.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="pkcss.css"> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     
+    <style type="text/css">
+
+
+.slider-container {
+            position: relative;
+            width: 1300px;
+            height: 600px;
+            overflow: hidden;
+            margin-top:-0px;
+            margin-left:-10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .slider {
+            display: flex;
+            width: 1300px;
+            height: 600px;
+        }
+        
+        
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.boxa {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgb(236, 240, 240);
+    text-align: center;
+    margin-left:19px;
+    margin-top:10px;
+}
+
+.boxa img {
+    width:300px;
+    height:260px;
+    margin-top:10px;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out;
+}
+
+.boxa .content {
+    padding: 10px;
+}
+
+.boxa:hover img {
+    transform: scale(1.2);
+}
+
+.boxb {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgb(247, 247, 247);
+    text-align: center;
+    margin-left:459px;
+    margin-top:-450px;
+}
+
+.boxb img {
+    width:300px;
+    height:260px;
+    margin-top:10px;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out;
+}
+
+.boxb .content {
+    padding: 10px;
+}
+
+.boxb:hover img {
+    transform: scale(1.2);
+}
+.boxc {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgb(247, 248, 248);
+    text-align: center;
+    margin-left:879px;
+    margin-top:-440px;
+}
+
+.boxc img {
+    width:300px;
+    height:260px;
+    margin-top:10px;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out;
+}
+
+.boxc .content {
+    padding: 10px;
+}
+
+.boxc:hover img {
+    transform: scale(1.2);
+}
+
+.boxd {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgb(241, 244, 245);
+    text-align: center;
+    margin-left:19px;
+    margin-top:10px;
+}
+
+.boxd img {
+    width:300px;
+    height:260px;
+    margin-top:10px;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out;
+}
+
+.boxd .content {
+    padding: 10px;
+}
+
+.boxd:hover img {
+    transform: scale(1.2);
+}
+
+
+.boxe {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgb(237, 240, 241);
+    text-align: center;
+    margin-left:459px;
+    margin-top:-450px;
+}
+
+.boxe img {
+    width:300px;
+    height:260px;
+    margin-top:10px;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out;
+}
+
+.boxe .content {
+    padding: 10px;
+}
+
+.boxe:hover img {
+    transform: scale(1.2);}
+
+
+    .boxf {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgb(238, 240, 241);
+    text-align: center;
+    margin-left:879px;
+    margin-top:-440px;
+}
+
+.boxf img {
+    width:300px;
+    height:260px;
+    margin-top:10px;
+    object-fit: cover;
+    transition: transform 0.1s ease-in-out;
+}
+
+.boxf .content {
+    padding: 10px;
+}
+
+.boxf:hover img {
+    transform: scale(1.2);
+}
+.w{
+    font-style: italic;
+    text-align: center;
+}
+
+.video-container {
+                position: relative;
+                width: 120%;
+                max-width: 800px;
+                cursor: pointer;
+                align-items: center;
+                margin-left:220px;
+                border-radius: 10px;
+            }
+            .video-container img {
+                width: 120%;
+                height: auto;
+                display: block;
+                border-radius: 10px;
+            }
+         
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.texts {
+    width: 50%;
+    text-align: justify;
+    padding:30px;
+}
+
+.image {
+    width: 40%;
+    height:50px;
+    margin-top:-450px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+
+.slider-containerp {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+   
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+    margin-left:590px;
+    margin-top:10px;
+}
+
+.review-boxp {
+    display: none;
+  margin-top:10px;
+    font-size: 18px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.review-boxp.active {
+    display: block;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+  gap: 300px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+
+.review-cardl {
+   
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: -300px;
+    margin-left:90px;
+}
+
+.profile-imgl {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-contentl h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ratingl {
+    font-size: 20px;
+    color: #ff9800;
+    margin: 5px 0;
+}
+
+.rating-scorel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.google-poweredl {
+    color: #777;
+    font-size: 14px;
+}
+
+.google-textl{
+    color: #4285F4;
+    font-weight: bold;
+   
+}
+
+.review-btn {
+    width:200px;
+    background: hsl(320, 89%, 61%);
+    color: white;
+    border: none;
+    padding: 0px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+   
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left:-20px;
+}
+
+.review-btn img {
+    width: 10px;
+    margin-left: 10px;
+    margin-top:1px;
+}
+.gallery{
+    margin-top:90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+}
+.gallery img {
+    height: 200px;
+            width: 300px; /* Adjust size as needed */
+            height: auto;
+            filter: grayscale(100%); /* Make images black and white */
+            transition: filter 0.0s ease-in-out;
+        }
+
+        .gallery img:hover {
+            filter: grayscale(0%); /* Show color on hover */
+        }
+
+
+
+
+
+     
+
+
+/* Footer container */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top:100px;
+}
+
+/* Flex container for footer sections */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #f8b400;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Quick Links & Services List */
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f8b400;
+}
+
+/* Appointment Button */
+.appointment-btn {
+    background-color: #f8b400;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.appointment-btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #111;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+   
+       
+        <ul>
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="#">    <img src="ps.png" height="50px" width="290px" marg></a>
+                         </div>
+                    <ul class="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="ab.html">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#">Our Services</a>
+                            <ul class="dropdown-menu">
+                               
+                        
+                                <li><a href="Services.html">Wedding Photography</a></l>
+                                <li><a href="baby.html">Baby Shower Photography</a></li>
+                      
+                            </ul>
+                        </li>
+                        <li><a href="Packages.html">Packages</a></li>
+                        
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contect.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+             
+    </nav>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="mrga.jpg" class="slide active" >
+            <img src="p.png" class="slide" >
+            <img src="mrgb.jpg" class="slide" >
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+</div>
+<script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(n) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[n].classList.add("active");
+    }
+
+    function prevSlide() {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+    }
+
+    function nextSlide() {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    }
+
+    // Auto-slide functionality
+    setInterval(nextSlide, 3000); // Change image every 3 seconds
+
+    // Initialize first slide
+    showSlide(index);
+</script>
+
+<div class="a">
+    <h1 style="text-align: center; font-size:35px;">Coimbatore Premium Wedding Storytellers</h1>
+    <q style="margin-left:80px;">Your wedding is a once-in-a-lifetime occasion filled with emotions, laughter, tears, and unforgettable moments. Let our team at AK Photography capture all those </q>
+<p style="text-align: center;">moments through our lens with an eye for detail and creativity that truly reflects your unique love story. Trust us to preserve your memories beautifully.</p>
+</div>
+ <div class="b">
+    <h2 style="text-align: center; ">Our Services</h2>
+ 
+ 
+    <div class="boxa">
+        <img src="e1.png" alt="Engagement">
+        <div class="content">
+            <h2>ENGAGEMENT</h2>
+            <p>Capture dream engagement moments to tell your love storylove story for couples with Ak Photography's unmatched engagement photography in Coimbatore. Let us tell your love story through our lens....</p>
+        </div>
+    </div>
+    <div class="boxb">
+        <img src="eb.jpg" alt="Engagement">
+        <div class="content">
+            <h2>PRE WEDDING</h2>
+            <p>Experience the best ever pre-wedding photography in close creative collaboration with AK Photography. Professional quality images and unmatched service to capture your special moments forever!</p>
+        </div>
+    </div>
+    
+    
+    <div class="boxc">
+        <img src="ec.jpg" alt="Engagement">
+        <div class="content">
+            <h2>WEDDING</h2>
+            <p>Looking for professional Candid wedding photographers in Coimbatore? With decades of experience, ak photography will capture timeless Candid moments on camera and preserve them for a lifetime!</p>
+        </div>
+    </div>
+    
+    
+    <div class="boxd">
+        <img src="ed.jpg" alt="POST WEDDING">
+        <div class="content">
+            <h2>POST WEDDING</h2>
+            <p>Get the best post-wedding photos with Ak Photography in Coimbatore! Our experienced professionals capture all your special memories, ensuring a beautiful reminder of your important day.</p>
+        </div>
+    </div>
+    
+    
+    
+    <div class="boxe">
+        <img src="ee.jpg" alt="Engagement">
+        <div class="content">
+            <h2>BABY SHOWER FUNCTION</h2>
+            <p>Ak Photography offers professional Baby Shower Function photography in Coimbatore. We capture life's most special moments with high-quality photos. Enjoy excellent service and fast delivery of your photos.</p>
+        </div>
+    </div>
+    
+    
+    <div class="boxf">
+        <img src="ef.jpg" alt="Engagement">
+        <div class="content">
+            <h2>MATERNITY SHOOT</h2>
+            <p>Capture timeless memories with our maternity shoots in Coimbatore! Experience the professional photography of ak photography and create lasting impressions of your pregnancy journey.</p>
+        </div>
+    </div>
+    
+
+    <div class="w">
+        <h1>Wedding Film</h1>
+    </div>
+    
+  
+        
+        <div class="video-container" onclick="playVideo()">
+            <img src="data:image/jpeg;base64,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" alt="Click to play video">
+    
+        </div>
+    
+        <script>
+            function playVideo() {
+                window.location.href = "https://youtu.be/ZieZlR4W11c";
+            }
+        </script>
+   
+       <div class="container">
+           <div class="texts">
+               <h2 style="font-size:60px;"font-family="cursive">Premium Wedding</h2>
+               <h3>Our Photography Philosophy: Capturing Timeless Moments</h3>
+               <p>
+                   Welcome to AK Photography, where we specialize in transforming ordinary moments into extraordinary memories.
+                   We believe in seizing the distinct beauty in each moment and converting everyday moments into exquisite memories.
+               </p>
+               <p>
+                   In today’s rapidly moving world, it’s easy to overlook the beauty that surrounds us.
+                   We acknowledge that time moves forward and every fleeting moment is precious.
+               </p>
+               <p>Do images truly express as much as words do - or even more? Why do some pictures evoke strong emotions within us or strike a chord deep within? You may or may not have answers to such questions. But what you have here is a well-curated list of words of wisdom or witty one-liners from photographers who have wowed us with their stellar images. This is a collection of famous photography quotes on their observations about their art, passion, and profession.
+                We are a photo editing company that provides editing services for professional wedding photographers, and that means we work with a lot of amazing pro wedding photographers. And we’ve been following wedding photographers, portrait photographers, boudoir photographers, lifestyle photographers, and influencers very closely for years, collecting words of advice we can pass on to inspire, educate, and motivate the entire community of photographers we collaborate with. While some of these quotes might reiterate how inspiring the art of photography could be for both the photographer and the viewer, others might take you back to a moment you had probably experienced as a photographer. And yes, coming back to what we began with, you could always take your pick of caption from this compilation of quotes for a well-curated social media feed. From inspirational to funny, we have one for every mood!</p>
+           </div>
+           <div class="image">
+               <img src="edit.jpg" alt="Photographer at work">
+           </div>
+       </div>
+
+           <div class="slider-containerp">
+               <div class="review-boxp">
+                <img src="https://akphotographyarun.com/wp-content/uploads/2023/12/ChIJlxNVl9NZqDsRhELjsieWXY0_42e4167afc5a413bd4b0eb6e46b0154f.jpg" alt="AK Photography" class="profile-imgl">
+                   <p>⭐⭐⭐⭐⭐</p>
+                   <p>"Booked them through Instagram for my son's birthday. They did a great job!"</p>
+                   <h3>- Gowtham S</h3>
+               </div>
+               <div class="review-boxp">
+                <img src="https://akphotographyarun.com/wp-content/uploads/2023/12/ChIJlxNVl9NZqDsRhELjsieWXY0_2f5583fe9986f0702916e89c571d3b0d.jpg" alt="AK Photography" class="profile-imgl">
+                   <p>⭐⭐⭐⭐⭐</p>
+                   <p>"Very professional and friendly team. Highly recommended!"</p>
+                   <h3>- Venkat Narasimham</h3>
+               </div>
+               <div class="review-boxp">
+                <img src="https://akphotographyarun.com/wp-content/uploads/2023/12/ChIJlxNVl9NZqDsRhELjsieWXY0_c4e6e24bb18f7034e4d71a4247cb40a4.jpg" alt="AK Photography" class="profile-imgl">
+                   <p>⭐⭐⭐⭐⭐</p>
+                   <p>"From search to delivery, our experience was amazing!"</p>
+                   <h3>- Pragati Dhanapal</h3>
+               </div>
+               <div class="review-boxp">
+                <img src="https://akphotographyarun.com/wp-content/uploads/2023/12/ChIJlxNVl9NZqDsRhELjsieWXY0_72d6a5c57b165e55d8131d63d97f0e4e.jpg">
+                   <p>⭐⭐⭐⭐⭐</p>
+                   <p>"Excellent photography skills! Loved the album and video!"</p>
+                   <h3>- Sneha R</h3>
+               </div>
+               <div class="review-boxp">
+                <img src="https://akphotographyarun.com/wp-content/uploads/2023/12/ChIJlxNVl9NZqDsRhELjsieWXY0_f924d8cfb046ef24faffbfb222c0533d.jpg" alt="AK Photography" class="profile-imgl">
+                   <p>⭐⭐⭐⭐</p>
+                   <p>"On-time delivery and great editing. Definitely recommended!"</p>
+                   <h3>- Arjun M</h3>
+               </div>
+           </div>
+       
+       
+           <script>const reviews = document.querySelectorAll(".review-boxp");
+            let currentReview = 0;
+            
+            // Function to show review
+            function showReview(index) {
+                reviews.forEach((review, i) => {
+                    review.classList.remove("active");
+                    if (i === index) {
+                        review.classList.add("active");
+                    }
+                });
+            }
+            
+            // Function to move to the next review
+            function nextReview() {
+                currentReview = (currentReview + 1) % reviews.length;
+                showReview(currentReview);
+            }
+            
+            // Auto slide every 3 seconds
+            let autoSlide = setInterval(nextReview, 3000);
+            
+            // Show first review initially
+            showReview(currentReview);
+            
+            // Stop auto-slide when clicking next/prev buttons
+            document.getElementById("nextp").addEventListener("click", () => {
+                nextReview();
+                resetAutoSlide();
+            });
+            
+            document.getElementById("prev").addEventListener("click", () => {
+                currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+                showReview(currentReview);
+                resetAutoSlide();
+            });
+            
+            // Function to reset auto-slide timer
+            function resetAutoSlide() {
+                clearInterval(autoSlide);
+                autoSlide = setInterval(nextReview, 3000);
+            }</script>
+      
+          <div class="review-cardl">
+              <img src="https://lh3.googleusercontent.com/places/ANXAkqEEoJ1n9DSVS1FDW7I4E5OQYtnUdhl4v5SqkSNTQIoPfLH4Wkg6S-ekFunJy5AoeCMbr2hemciYtHRIKNxT8qHLQ6ezF_kokm8=s1600-w300-h300" alt="AK Photography" class="profile-imgl" alt="AK Photography" class="profile-imgl">
+              <div class="review-contentl">
+                  <h2>AK PHOTOGRAPHY BEST <br> CANDID WEDDING <br> PHOTOGRAPHY IN COIMBATORE</h2>
+                  <div class="ratingl">
+                      <span class="starsl">★★★★★</span> 
+                      <span class="rating-scorel">4.8</span>
+                  </div>
+                  <p>Based on <strong>158</strong> reviews</p>
+                  <p class="google-powered">powered by <span class="google-textl">Google</span></p>
+                  <button class="review-btn">Review us on <img src="g (2).jpg" alt="Google"></button>
+              </div>
+          </div>
+          <div class="gallery">
+            <img src="pia.jpeg" alt="Image 1" height>
+            <img src="pc (3).jpeg" alt="Image 2">
+            <img src="pc (1).jpeg" alt="Image 3">
+            <img src="pc (2).jpeg" alt="Image 4">
+            <img src="pb.jpeg" alt="Image 5">
+            <img src="pc (4).jpeg" alt="Image 6">
+            <img src="pc (5).jpeg" alt="Image 7">
+            <img src="pc (6).jpeg" alt="Image 8">
+            <img src="pc (7).jpeg" alt="Image 7">
+            <img src="pc (8).jpeg" alt="Image 7">
+            <img src="pc (9).jpeg" alt="Image 7">
+            <img src="pc (10).jpeg" alt="Image 7">
+        </div>
+      
+        
+   </div>
+   </ul>
+  
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>AK PHOTOGRAPHY</h2>
+                <p>+91 90944 37724</p>
+                <button class="appointment-btn">Request an Appointment</button>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="ab.html">About Us</a></li>
+                    <li><a href="Services.html">service</a></li>
+                    <li><a href="baby.html">blog</a></li>
+                    <li><a href="contect.html">contectus</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#">Engagement Photography</a></li>
+                    <li><a href="#">Pre Wedding Photography</a></li>
+                    <li><a href="#">Wedding Photography</a></li>
+                    <li><a href="#">Post Wedding Photography</a></li>
+                    <li><a href="#">Baby Shower Photography</a></li>
+                    <li><a href="#">Maternity Photography</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>No.126, Chokkampudur Main Road, <br>
+                   Gandhi Park, Selvapuram North, <br>
+                   Coimbatore, Tamil Nadu 641001</p>
+                <div class="social-icons">
+                    <a href="#"><img src="face.png" alt="Facebook"></a>
+                    <a href="#"><img src="what.png" alt="Instagram"></a>
+                    <a href="#"><img src="tw.png" alt="YouTube"></a>
+                    <a href="#"><img src="insta.png" alt="Pinterest"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 AK PHOTOGRAPHY | Powered by RKINFO</p>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>
+   </body>
+        </html>
+          
