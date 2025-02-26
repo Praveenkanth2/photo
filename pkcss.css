@@ -1,0 +1,90 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff8c00;
+    padding: 15px 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo styling (LEFT SIDE) */
+.navba.logo img {
+    height: 50px;
+    width: auto;
+    }
+
+/* Aligning the menu beside the logo */
+.menu {
+    list-style: none;
+    display: flex;
+    margin-left: auto; /* Pushes the menu to the right */
+}
+
+/* Menu items */
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+/* Navbar links */
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Content padding to avoid hiding under navbar */
+body {
+    padding-top: 80px;
+}
+/* Background Image */
+
+/* Content Below */
+.content {
+    padding: 50px;
+    
+}
+
+.long-text {
+    height: 200vh; /* To create scrolling effect */
+}
