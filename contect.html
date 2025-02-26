@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pk photos</title>
+        <link rel="icon" type="logo.jpg-icon" href="icon.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="pkcss.css"> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     
+    <style type="text/css">
+    .slider img{
+        height:600px;
+        width:1300px;
+    }
+/* General Styles */
+
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+ 
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container */
+.image-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info h3 {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #d63384;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info strong {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .contact-info {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+margin-left:500px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+
+/* Footer container */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top:100px;
+}
+
+/* Flex container for footer sections */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #f8b400;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Quick Links & Services List */
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f8b400;
+}
+
+/* Appointment Button */
+.appointment-btn {
+    background-color: #f8b400;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.appointment-btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #111;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
+
+
+
+        </style>
+</head>
+<body>
+    <ul>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">    <img src="ps.png" height="50px" width="290px" marg></a>
+                 </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ab.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services</a>
+                    <ul class="dropdown-menu">
+                       
+                
+                        <li><a href="Services.html">Wedding Photography</a></l>
+                        <li><a href="baby.html">Baby Shower Photography</a></li>
+              
+                    </ul>
+                </li>
+                <li><a href="Packages.html">Packages</a></li>
+                
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contect.html">Contact Us</a></li>
+            </ul>
+        </nav>
+            <div class="slider">
+                <img src="gifa.gif">
+                </div>
+               
+                    <section class="contact-section">
+                        <div class="image-container">
+                            <img src="pia.jpeg" alt="Wedding Couple">
+                        </div>
+                        <div class="contact-info">
+                            <h2>Get in Touch</h2>
+                            <h3>Don’t Hesitate.</h3>
+                            <p>As your Coimbatore Wedding Photographers, we specialize in capturing genuine moments and emotions. Let us transform your special day into timeless memories. Contact us today for Candid Wedding Photography.</p>
+                            <p><strong>📍 Address:</strong> No.126, Chokkampudur Main Road, Gandhi Park, Selvapuram North, Coimbatore, Tamil Nadu 641001</p>
+                            <p><strong>📧 Email:</strong> <a href="mailto:info@akphotographyarun.com">itspk9025@.com</a></p>
+                            <p><strong>📞 Phone:</strong> <a href="tel:+919999437724">+91 99947 34784</a></p>
+                        </div>
+                    </section>
+                
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Form Page</title>
+                        <link rel="stylesheet" href="styles.css">
+                    </head>
+                    <body>
+                    
+                        <div class="container">
+                            <h2>Registration Form</h2>
+                            <form action="#" method="post">
+                                
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                    
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                    
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                    
+                    
+                                <label for="country">Country:</label>
+                                <select id="country" name="country">
+                                    <option value="india">India</option>
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                    <option value="canada">Canada</option>
+                                </select>
+                    
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="4"></textarea>
+                    
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.12686671131!2d77.66325770999231!3d12.83507751780582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6de6cb67a8a5%3A0x2f7d4b24d35baf6f!2sAK%20PHOTO%20STUDIO!5e0!3m2!1sen!2sin!4v1740541243819!5m2!1sen!2sin" width="1300" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <footer>
+                            <div class="footer-container">
+                                <div class="footer-section">
+                                    <h2>AK PHOTOGRAPHY</h2>
+                                    <p>+91 90944 37724</p>
+                                    <button class="appointment-btn">Request an Appointment</button>
+                                </div>
+                    
+                                <div class="footer-section">
+                                    <h3>Quick Links</h3>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="ab.html">About Us</a></li>
+                                        <li><a href="Services.html">service</a></li>
+                                        <li><a href="baby.html">blog</a></li>
+                                        <li><a href="contect.html">contectus</a></li>
+                                    </ul>
+                                </div>
+                    
+                                <div class="footer-section">
+                                    <h3>Our Services</h3>
+                                    <ul>
+                                        <li><a href="#">Engagement Photography</a></li>
+                                        <li><a href="#">Pre Wedding Photography</a></li>
+                                        <li><a href="#">Wedding Photography</a></li>
+                                        <li><a href="#">Post Wedding Photography</a></li>
+                                        <li><a href="#">Baby Shower Photography</a></li>
+                                        <li><a href="#">Maternity Photography</a></li>
+                                    </ul>
+                                </div>
+                    
+                                <div class="footer-section">
+                                    <h3>Contact Us</h3>
+                                    <p>No.126, Chokkampudur Main Road, <br>
+                                       Gandhi Park, Selvapuram North, <br>
+                                       Coimbatore, Tamil Nadu 641001</p>
+                                    <div class="social-icons">
+                                        <a href="#"><img src="face.png" alt="Facebook"></a>
+                                        <a href="#"><img src="what.png" alt="Instagram"></a>
+                                        <a href="#"><img src="tw.png" alt="YouTube"></a>
+                                        <a href="#"><img src="insta.png" alt="Pinterest"></a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="footer-bottom">
+                                <p>&copy; 2025 AK PHOTOGRAPHY | Powered by RKINFO</p>
+                            </div>
+                        </footer>
+                </body>
+                </html>
+    
+      
