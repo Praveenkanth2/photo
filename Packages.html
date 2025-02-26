@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pk photos</title>
+        <link rel="icon" type="logo.jpg-icon" href="icon.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="pkcss.css"> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     
+    <style type="text/css">
+    .slider{
+        height:500px;
+        width:1300px;
+    }
+
+
+
+/* Pricing Section */
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+}
+
+.package {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    margin: 20px;
+    text-align: center;
+    margin-top: 590px;
+}
+
+.package h2 {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    margin: -20px -20px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.package h3 {
+    color: #e91e63;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.package ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.package ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.package ul li:last-child {
+    border-bottom: none;
+}
+
+.contact {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Photography Packages Section */
+.photo-packages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 20px;
+}
+
+/* Individual Package */
+.photo-package {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    margin: 20px;
+    text-align: center;
+    
+    
+}
+
+.photo-package:hover {
+    transform: scale(1.05);
+}
+
+/* Package Titles */
+.photo-package h2 {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    margin: -20px -20px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Price */
+.photo-package h3{
+    color: #e91e63;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+/* Features List */
+.photo-package ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.photo-package ul li {
+    text-align: left;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.photo-package ul li:last-child {
+    border-bottom: none;
+}
+
+
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.service {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.service img {
+    width: 50px;
+    height: 50px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+.blog {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Footer container */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top:100px;
+   
+    width:1290px;
+}
+
+/* Flex container for footer sections */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+/* Footer sections */
+.footer-section p{
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    color: #ddd;
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #f8b400;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Quick Links & Services List */
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f8b400;
+}
+
+/* Appointment Button */
+.appointment-btn {
+    background-color: #f8b400;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.appointment-btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #111;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <ul>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">    <img src="ps.png" height="50px" width="290px" marg></a>
+                 </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ab.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services</a>
+                    <ul class="dropdown-menu">
+                       
+                
+                        <li><a href="Services.html">Wedding Photography</a></l>
+                        <li><a href="baby.html">Baby Shower Photography</a></li>
+              
+                    </ul>
+                </li>
+                <li><a href="Packages.html">Packages</a></li>
+                
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contect.html">Contact Us</a></li>
+            </ul>
+        </nav>
+            <div class="slider">
+                <img src="pack.jpeg">
+                </div>
+              
+
+
+    <section class="pricing">
+        <div class="package basic">
+            <h2>BASIC</h2>
+            <h3>69,000/-</h3>
+            <ul>
+                <li>Traditional/Candid Photography - EOS R6 Mark II (Unlimited Photos)</li>
+                <li>Traditional Videography - Sony FX-30 4K Cinema Line</li>
+                <li>Luxury Album - One Album (Size 16 X 24) Package (180 Only)</li>
+                <li>Deliverables: Non-Tearable Synthetic Album with Acrylic Pad</li>
+                <li>Cinematic Wedding Teaser - 2 Mins</li>
+                <li>One Pen Drive Box (Full HD Video)</li>
+                <li>Frames (12 X 18 Photo Lamination) - 1 Nos</li>
+                <li>Couple Calendar / Couple Mug with Photo</li>
+            </ul>
+            <p class="contact">Contact: 99944-37724 / 95009-37724</p>
+        </div>
+
+        <div class="package standard">
+            <h2>STANDARD</h2>
+            <h3>99,000/-</h3>
+            <ul>
+                <li>Traditional Photography - EOS R6 Mark II (Unlimited)</li>
+                <li>Candid Photography - Sony Alpha A7 IV</li>
+                <li>Traditional Videography - Sony FX 200 4K Cinema Line</li>
+                <li>Luxury Album - One Album (Size 12 X 36) Package (250 Only)</li>
+                <li>Pre or Post-Wed Anyone Compliment</li>
+                <li>Deliverables: Non-Tearable Synthetic Album with Acrylic Pad</li>
+                <li>Cinematic Wedding Teaser - 2 Mins</li>
+                <li>One Pen Drive Box (Full HD Video)</li>
+                <li>Frames (12 X 18 Photo Lamination) - 2 Nos</li>
+                <li>Couple Calendar / Couple Mug with Photo</li>
+            </ul>
+            <p class="contact">Contact: 99944-37724 / 95009-37724</p>
+        </div>
+        
+        <div class="package standard">
+            <h2>PREMIUM
+
+                </h2>
+            <h3>
+                EUXLIRY 1,79,000/-</h3>
+            <ul>
+                <li>1 Traditional Photography EOS 16 Mark 11-One Camera</li>
+
+               <li>2 Candid Photography-Sony Alpha A7RIV-One Camere</li>
+                
+              <li>3 Traditional Videography- Sony FX 304K</li>
+                
+               <li> 4 Candid Videography-Sony A7RV DJI Ronin Widelene Gladle Che Tam</li>
+                
+               <li> 5 Drone Mavic Pro 2 (4K)</li>
+                
+               <Li> 6 Luxury Album-Two Albans (Sze12 X 36) Package Phun (2000-</Li>
+                
+              <li> 7 Pre Wed Or Post Wed Any One/Save The Date/Beets by 300</li>
+                
+                <li>8 Deliverable- Non Tearable Synthetic Album with Acrylic P Embossing Glitter Feather Transperem Sy Me</li>
+                
+                <li>Cintmark Wedding Teaser & Wedding Highlig</li>
+                
+                <li>One Pen Drive Box (Full HD Videol</li>
+                
+                <li>Frames (24 X16 Plus Lamination 2 N</li>
+                
+                <li>Couple Calender Coupe Mug with Pho</li>
+                
+                
+               
+            </ul>
+            <p class="contact">99944-37724 95009-37724</p>
+            </div>
+        
+        
+
+                
+                <section class="photo-packages">
+                    <div class="photo-package">
+                        <h2>LUXURY</h2>
+                        <h3>1,39,000/-</h3>
+                        <ul>
+                            <li>Leica 0-Series No. 122 - Most Expensive Camera. ....</li>
+                            <li> device for recording an image of an object on a light-sensitive surface</li>
+                            <li>it is essentially a light-tight box with an aperture to admit light focused onto</li>
+                            <li>a sensitized film or plate. A brief treatment of cameras follows.</li>
+                            <li>Phase One XF IQ4 - 150MP Camera System. ...
+                                Hasselblad H6D-400c MS. ...</li>
+                            <li>Sony Alpha 1. ...
+                                Fujifilm GFX II. ...</li>
+                            <li>Canon EOS R3. ...
+                                Red Ranger Helium 8K S35.</li>
+                        </ul>
+                    </div>
+            
+                    <div class="photo-package">
+                        <h2>GOLD</h2>
+                        <h3>1,79,000/-</h3>
+                        <ul>
+                            <li>relatively easy to use, contain liquid crystal display (LCD) screens and image management software that allows the user to select and edit images,</li>
+                            <li>Candid Photography - Sony Alpha A7R V - One Camera (Unlimited Photos)</li>
+                            <li>Traditional Videography - Sony FX 30 4K Cinema Line - One Camera</li>
+                            <li>Candid Videography - Sony A7R V | DJI Ronin | Widesense - Gimbal - One Camera</li>
+                            <li>Drone Mavic Pro 2 (4K)</li>
+                            <li>Luxury Album - Two Albums (Size 12 X 36) Package Photos (200 - 200 Only)</li>
+                            <li>Pre or Post Wed - Save The Date / Reels / Spin 360</li>
+                            <li>Deliverables: Non Tearable Album, Cinematic Wedding Teaser, Frames</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="services">
+                    <div class="service">
+                        <img src="cemera.png" alt="Camera Icon">
+                        <h2>Candid Photography</h2>
+                        <p>Candid Photography is just about the moments. At DLM, it's all about being candid. We are trained to approach and work hard to help you relive your moments.</p>
+                    </div>
+            
+                    <div class="service">
+                        <img src="video.png" alt="Video Icon">
+                        <h2>Wedding Film</h2>
+                        <p>A wedding we believe is like a movie. The coming together of so many beautiful things into one big happy story that is timeless. Isn't it important to capture this fairy-tale?</p>
+                    </div>
+            
+                    <div class="service">
+                        <img src="Traditional Ico.png" alt="Traditional Icon">
+                        <h2>Traditional Photography</h2>
+                        <p>Traditional wedding photography is recognized as formal photography. Studio where posed and looking towards the camera. Cheese!</p>
+                    </div>
+                </section>
+            
+                <footer>
+                    <div class="footer-container">
+                        <div class="footer-section">
+                            <h2>AK PHOTOGRAPHY</h2>
+                            <p>+91 90944 37724</p>
+                            <button class="appointment-btn">Request an Appointment</button>
+                        </div>
+            
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="ab.html">About Us</a></li>
+                                <li><a href="Services.html">service</a></li>
+                                <li><a href="baby.html">blog</a></li>
+                                <li><a href="contect.html">contectus</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="footer-section">
+                            <h3>Our Services</h3>
+                            <ul>
+                                <li><a href="#">Engagement Photography</a></li>
+                                <li><a href="#">Pre Wedding Photography</a></li>
+                                <li><a href="#">Wedding Photography</a></li>
+                                <li><a href="#">Post Wedding Photography</a></li>
+                                <li><a href="#">Baby Shower Photography</a></li>
+                                <li><a href="#">Maternity Photography</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="footer-section">
+                            <h3>Contact Us</h3>
+                            <p>No.126, Chokkampudur Main Road, <br>
+                               Gandhi Park, Selvapuram North, <br>
+                               Coimbatore, Tamil Nadu 641001</p>
+                            <div class="social-icons">
+                                <a href="#"><img src="face.png" alt="Facebook"></a>
+                                <a href="#"><img src="what.png" alt="Instagram"></a>
+                                <a href="#"><img src="tw.png" alt="YouTube"></a>
+                                <a href="#"><img src="insta.png" alt="Pinterest"></a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 AK PHOTOGRAPHY | Powered by RKINFO</p>
+                    </div>
+                </footer>
+                </body>
+                </html>
+    
+      
